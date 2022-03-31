@@ -7,7 +7,7 @@ function Products(props) {
                 {/* <!-- Sale badge--> */}
                 <div class="badge bg-dark text-white position-absolute" style={{ top: "0.5rem", right: "0.5rem" }} >{props.items.sale}</div>
                 {/* <!-- Product image--> */}
-                <img class="card-img-top" src="https://picsum.photos/200/150" alt="..." />
+                <img class="card-img-top" src={props.items.url} alt="..." />
                 {/* <!-- Product details--> */}
                 <div class="card-body p-4">
                     <div class="text-center">
@@ -24,7 +24,7 @@ function Products(props) {
 
                         </div>
                         {/* <!-- Product price--> */}
-                        <span class="text-muted text-decoration-line-through">Rs.{props.items.ratecut}</span>
+                        <span class="text-muted text-decoration-line-through">{props.items.ratecut}</span>
                         Rs.{props.items.rate}
                     </div>
                 </div>

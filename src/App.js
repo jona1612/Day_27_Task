@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Cart from './Cart';
+// import Cart from './Cart';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Products from './products';
 import CartItems from './CartItems';
@@ -10,60 +10,65 @@ function App() {
   const [products, setProducts] = useState([
     {
       id: 1,
-      name: "SAMSUNG",
-      rate: 55000,
-      ratecut: 75000,
-      url: "",
+      name: "SAMSUNG S22",
+      rate: 105000,
+      ratecut: 'Rs.125000',
+      url: "../samsung.webp",
     },
     {
       id: 2,
       name: "MONTBLANC",
       rate: 65000,
-      ratecut: 85000,
+      ratecut: 'Rs.85000',
       sale: "sale",
       star: true,
+      url: "../montblanc-watch.jpg",
     },
     {
       id: 3,
-      name: "APPLE",
-      rate: 85000,
-      ratecut: 125000,
+      name: "IPHONE 13 PRO",
+      rate: 135000,
+      ratecut: 'Rs.165000',
       sale: "sale",
+      url: "../iphone-13.jpg",
     },
     {
       id: 4,
-      name: "LENOVO",
-      rate: 60000,
-      ratecut: 75000,
+      name: "ONEPLUS 10 PRO",
+      rate: 70000,
+      ratecut: 'Rs.85000',
       star: true,
+      url: "../OnePlus.jpg",
     },
     {
       id: 5,
-      name: "HP",
-      rate: 72000,
-      ratecut: 87000,
+      name: "MASERATI",
+      rate: 14500000,
       sale: "sale",
+      url: "../Maserati.jpg",
     },
     {
       id: 6,
-      name: "ASUS",
-      rate: 55000,
-      ratecut: 65000,
+      name: "FORD MUSTANG GT500",
+      rate: 12500000,
+      url: "../Images.jpg",
     },
     {
       id: 7,
-      name: "ONEPLUS",
-      rate: 55000,
-      ratecut: 76000,
+      name: "MINI COOPER",
+      rate: 15000000,
+      ratecut: "",
       sale: "sale",
       star: true,
+      url: "../Mini.jpg",
     },
     {
       id: 8,
-      name: "ACER",
-      rate: 70000,
-      ratecut: 86000,
+      name: "ASTON MARTIN",
+      rate: 27500000,
+      ratecut: "",
       star: true,
+      url: "../Aston.jpg",
     }
   ]);
 
@@ -115,7 +120,8 @@ function App() {
             </ul>
             <div class="d-flex">
               <button onClick={() => openCart(open)} class="btn btn-outline-dark" type="submit">
-                <i class="bi-cart-fill me-1"></i>
+                {/* <i class="bi-cart-fill me-1"></i> */}
+                <img src='/cart-fill.svg' alt='...'></img>
                 Cart
                 <span class="badge bg-dark text-white ms-1 rounded-pill">{cartitems.length}</span>
               </button>
